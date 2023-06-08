@@ -1,7 +1,7 @@
 # Celestial-World-2.0---Xetass-UI-Overlay
 
 This tool provides help for running Xetass in Celestial-World-2.0. 
-It's a graphical tool which aims on helping to keep track of your islands your already did. Just drag the overlay over the Xetass map and klick the island, to mark it as finished. 
+It's a graphical tool which aims on helping to keep track of your islands your already did. Just drag the overlay over the Xetass map and click the island, to mark it as finished. 
 
 ![ScreenShot](example.PNG)
 
