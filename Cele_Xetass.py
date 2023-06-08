@@ -1,17 +1,4 @@
-import tkinter
 import customtkinter
-import sys
-"""
-to do:
-focus windows
-reset button
-2k screen = 2560 x 1440
-window size = 376 x 421
-frame =   368 * 368
-card size = 58*58
-
-
-"""
 
 
 class Cele_Xetass(customtkinter.CTk):
@@ -22,12 +9,11 @@ class Cele_Xetass(customtkinter.CTk):
         self.title("Xetass")
         self.minsize(376, 421)
         self.maxsize(376, 421)
-        #self.geometry("376x421")
-        self.focus_force() # focus window??
         self.attributes('-topmost', 'true')
+        self.attributes("-alpha", 0.7)
 
 
-        self.grid_rowconfigure((0,1), weight=1)  # configure grid system
+        self.grid_rowconfigure((0,1), weight=1)
         self.grid_columnconfigure((0,1), weight=1)
 
         self.cards_Frame = Cards_Frame(self)
@@ -52,13 +38,8 @@ class Cards_Frame(customtkinter.CTkFrame):
         super().__init__(*args, **kwargs)
         self.configure(width=368)
         self.configure(height=368)
-
-        #self.configure(border_width=1)
-        #self.configure(border_color="blue")
         self.configure(bg_color="transparent")
         self.configure(fg_color="transparent")
-
-
 
         self.grid_rowconfigure((0, 1, 2, 3, 4), weight=1)
         self.grid_columnconfigure((0, 1, 2, 3, 4), weight=1)
@@ -99,26 +80,8 @@ class Card_Button(customtkinter.CTkButton):
 
 
 
-
-
-
 if __name__ == "__main__":
 
     cele_xetass = Cele_Xetass()
-    cele_xetass.attributes("-alpha", 0.7)
     cele_xetass.mainloop()
-"""
-    if sys.platform.startswith("win"):  # set transparency in windows
-        transparent_color = '#000001'
-        cele_xetass.attributes("-transparentcolor", transparent_color)
-        cele_xetass.config(bg=transparent_color)
-
-    elif sys.platform.startswith("darwin"):  # set transparency in mac os
-        transparent_color = 'systemTransparent'
-        cele_xetass.attributes("-transparent", True)
-        cele_xetass.config(bg=transparent_color)
-
-    else:
-        cele_xetass.attributes('alpha', 0.5)  # no full transparency method in linux
-"""
 
